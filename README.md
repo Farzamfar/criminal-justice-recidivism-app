@@ -1,3 +1,4 @@
+🌐 **Live App:** [https://marzieh-criminal-justice-app.streamlit.app/](https://marzieh-criminal-justice-app.streamlit.app/)
 # ⚖️ Recidivism Risk Prediction App
 
 A machine learning web application that predicts the likelihood of reoffending within two years, built using the COMPAS dataset.
