@@ -1,7 +1,9 @@
 # ⚖️ Criminal Justice Recidivism Analysis & Prediction App
 
 🌐 **Live App:** [https://marzieh-criminal-justice-app.streamlit.app/](https://marzieh-criminal-justice-app.streamlit.app/)
+
 🔌 **Live API:** http://criminal-justice-env.eba-g3zhx8gr.us-west-2.elasticbeanstalk.com
+
 📖 **API Docs:** http://criminal-justice-env.eba-g3zhx8gr.us-west-2.elasticbeanstalk.com/docs
 
 ## 📌 Project Overview
