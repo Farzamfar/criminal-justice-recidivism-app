@@ -27,6 +27,8 @@ in criminal justice AI**.
 | `Recidivism_bias_analysis.ipynb` | Full ML analysis — Random Forest, SHAP, Bias Analysis |
 | `unsupervised_learning_compas.ipynb` | Unsupervised Learning — K-Means, Hierarchical, GMM, Anomaly Detection |
 | `model_interpretation.ipynb` | Model Interpretation — Permutation Importance, PDP, Group Effects |
+| `regression_analysis.ipynb` | Regression — Linear, Ridge, Lasso, Cross Validation |
+| `classification_analysis.ipynb` | Classification — Logistic, SVM, Decision Tree, Random Forest, ROC/PR, Threshold Selection |
 
 ## 🔍 Key Analyses
 
@@ -40,6 +42,8 @@ in criminal justice AI**.
 | Race Removal Experiment | Does removing race fix the bias? (Spoiler: No) |
 | Unsupervised Learning | K-Means, Hierarchical, GMM, Anomaly Detection |
 | Model Interpretation | Permutation Importance, PDP, Group Effects |
+| Regression | Linear baseline, Ridge/Lasso regularization, Log transform |
+| Classification Pipeline | Logistic, SVM, Trees, ROC/PR curves, Threshold selection |
 
 ## 🚨 Key Findings
 - African-American individuals are wrongly labeled high risk at **nearly double** 
@@ -54,14 +58,14 @@ in criminal justice AI**.
   everything else adds noise or bias
 
 ## 🛠️ Built With
+
 - Python 3.11
-- Scikit-learn (Random Forest, KMeans, PCA, GMM)
+- Scikit-learn (Random Forest, Logistic Regression, SVM, KMeans, PCA, GMM)
 - SHAP (Explainable AI)
 - FastAPI + Uvicorn (REST API)
 - Streamlit (Web App)
 - AWS Elastic Beanstalk (Cloud Deployment)
 - Pandas, NumPy, Matplotlib, Seaborn
-
 ## ⚠️ Ethics Note
 The COMPAS dataset has documented racial bias. This project is for 
 educational purposes only and should never be used for real criminal 
