@@ -65,6 +65,27 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+
+## 📓 Notebooks
+
+| Notebook | Description |
+|---|---|
+| `Recidivism_bias_analysis.ipynb` | Full ML analysis — Random Forest, SHAP, Bias Analysis |
+| `unsupervised_learning_compas.ipynb` | Unsupervised Learning — K-Means, Hierarchical, GMM, Anomaly Detection |
+
+## 🔍 Unsupervised Learning Highlights
+- **K-Means & Hierarchical Clustering** — found 4 natural groups in the data
+- **GMM** — soft clustering with uncertainty probabilities
+- **Anomaly Detection** — compared Z-score, Isolation Forest, and LOF
+- **Consensus Analysis** — identified 104 cases (1.4%) flagged by all three methods as unusual — older repeat offenders averaging 13.5 prior convictions
+
+
+
+
+
+
+
+
 ## 👤 Author
 **Marzieh Farzamfar**
 Senior Analyst — Criminal Justice | Aspiring Data Scientist
