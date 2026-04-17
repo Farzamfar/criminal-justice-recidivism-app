@@ -2,10 +2,6 @@
 
 🌐 **Live App:** [https://marzieh-criminal-justice-app.streamlit.app/](https://marzieh-criminal-justice-app.streamlit.app/)
 
-🔌 **Live API:** http://criminal-justice-env.eba-g3zhx8gr.us-west-2.elasticbeanstalk.com
-
-📖 **API Docs:** http://criminal-justice-env.eba-g3zhx8gr.us-west-2.elasticbeanstalk.com/docs
-
 ## 📌 Project Overview
 A comprehensive machine learning project analyzing the COMPAS recidivism 
 dataset — the same algorithm used in real US courtrooms to predict reoffending risk. 
@@ -17,11 +13,22 @@ in criminal justice AI**.
 | File | Description |
 |---|---|
 | `app.py` | Interactive Streamlit web application |
-| `Recidivism_bias_analysis.ipynb` | Full analysis notebook |
+| `main.py` | FastAPI REST API |
+| `Recidivism_bias_analysis.ipynb` | Full ML analysis notebook |
+| `unsupervised_learning_compas.ipynb` | Unsupervised learning notebook |
+| `model_interpretation.ipynb` | Model interpretation notebook |
 | `compas.csv` | COMPAS dataset (ProPublica) |
 | `requirements.txt` | Python dependencies |
 
-## 🔍 What's Inside the Notebook
+## 📓 Notebooks
+
+| Notebook | Description |
+|---|---|
+| `Recidivism_bias_analysis.ipynb` | Full ML analysis — Random Forest, SHAP, Bias Analysis |
+| `unsupervised_learning_compas.ipynb` | Unsupervised Learning — K-Means, Hierarchical, GMM, Anomaly Detection |
+| `model_interpretation.ipynb` | Model Interpretation — Permutation Importance, PDP, Group Effects |
+
+## 🔍 Key Analyses
 
 | Analysis | Description |
 |---|---|
@@ -31,8 +38,8 @@ in criminal justice AI**.
 | SHAP Values | Why the model makes each individual prediction |
 | Bias Analysis | False positive rates broken down by race |
 | Race Removal Experiment | Does removing race fix the bias? (Spoiler: No) |
-| Unsupervised Learning | PCA + K-Means clustering without labels |
-| Cluster Profiling | Natural groups found in the data |
+| Unsupervised Learning | K-Means, Hierarchical, GMM, Anomaly Detection |
+| Model Interpretation | Permutation Importance, PDP, Group Effects |
 
 ## 🚨 Key Findings
 - African-American individuals are wrongly labeled high risk at **nearly double** 
@@ -43,12 +50,16 @@ in criminal justice AI**.
   as the supervised model — validating the findings
 - A 72% recidivism rate was found in the repeat offender cluster 
   (14+ prior convictions) discovered without any labels
+- Only **age and prior convictions** are genuinely useful predictors — 
+  everything else adds noise or bias
 
 ## 🛠️ Built With
 - Python 3.11
-- Scikit-learn (Random Forest, KMeans, PCA)
+- Scikit-learn (Random Forest, KMeans, PCA, GMM)
 - SHAP (Explainable AI)
+- FastAPI + Uvicorn (REST API)
 - Streamlit (Web App)
+- AWS Elastic Beanstalk (Cloud Deployment)
 - Pandas, NumPy, Matplotlib, Seaborn
 
 ## ⚠️ Ethics Note
@@ -64,27 +75,6 @@ conda activate criminal_justice
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-
-## 📓 Notebooks
-
-| Notebook | Description |
-|---|---|
-| `Recidivism_bias_analysis.ipynb` | Full ML analysis — Random Forest, SHAP, Bias Analysis |
-| `unsupervised_learning_compas.ipynb` | Unsupervised Learning — K-Means, Hierarchical, GMM, Anomaly Detection |
-
-## 🔍 Unsupervised Learning Highlights
-- **K-Means & Hierarchical Clustering** — found 4 natural groups in the data
-- **GMM** — soft clustering with uncertainty probabilities
-- **Anomaly Detection** — compared Z-score, Isolation Forest, and LOF
-- **Consensus Analysis** — identified 104 cases (1.4%) flagged by all three methods as unusual — older repeat offenders averaging 13.5 prior convictions
-
-
-
-
-
-
-
 
 ## 👤 Author
 **Marzieh Farzamfar**
